@@ -1,0 +1,64 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Hulk",
+      "superPower": "superstrength",
+      "address": "New Mexiko"
+    },
+    {
+      "id": 2,
+      "name": "Quicksilver",
+      "superPower": "super speed",
+      "address": "Serbia"
+    },
+    {
+      "id": 3,
+      "name": "Spider-Man",
+      "superPower": "spider physiology",
+      "address": "New York"
+    },
+    {
+      "id": 4,
+      "name": "Iron Man",
+      "superPower": "He is IronMan",
+      "address": "New York"
+    },
+    {
+      "id": 5,
+      "name": "Thor",
+      "superPower": "asgardian god",
+      "address": "Asgard"
+    },
+    {
+      "id": 6,
+      "name": "Captain America",
+      "superPower": "artificially enhanced physiology",
+      "address": "New York"
+    },
+    {
+      "id": 7,
+      "name": "Scarlet Witch",
+      "superPower": "chaos magic",
+      "address": "Serbia"
+    },
+    {
+      "id": 8,
+      "name": "Hawkeye",
+      "superPower": "no superhuman abilities",
+      "address": "Waverly, Iowa"
+    },
+    {
+      "id": 9,
+      "name": "Wasp",
+      "superPower": "size reduction",
+      "address": "New Jersey"
+    },
+    {
+      "id": 10,
+      "name": "Captain Marvel",
+      "superPower": "superhuman",
+      "address": "Boston"
+    }
+  ]
+}
