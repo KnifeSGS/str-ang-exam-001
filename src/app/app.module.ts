@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './common/nav/nav.component';
 import { HomeComponent } from './page/home/home.component';
 import { HeroesComponent } from './page/heroes/heroes.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { SortPipe } from './pipe/sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
-    HeroesComponent
+    HeroesComponent,
+    FilterPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
