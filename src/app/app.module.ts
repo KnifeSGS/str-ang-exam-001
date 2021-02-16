@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './common/nav/nav.component';
+import { NavigationComponent } from './common/navigation/navigation.component';
 import { HomeComponent } from './page/home/home.component';
 import { HeroesComponent } from './page/heroes/heroes.component';
 import { FilterPipe } from './pipe/filter.pipe';
@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
+    NavigationComponent,
     HomeComponent,
     HeroesComponent,
     FilterPipe,

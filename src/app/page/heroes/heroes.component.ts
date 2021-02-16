@@ -11,10 +11,12 @@ import { HeroService } from 'src/app/service/hero.service';
 export class HeroesComponent implements OnInit {
 
   heroesList$: BehaviorSubject<Hero[]> = this.hService.list$;
+
   phrase: string = '';
   searchKey: string = 'name';
-  columnKey: string = '';
-  phraseString: string = '';
+  searchKeys: string[] = Object.keys(new Hero());
+
+  columnKey: string = 'id';
 
   constructor(private hService: HeroService) { }
 
@@ -29,9 +31,4 @@ export class HeroesComponent implements OnInit {
   onColumnSelect(key: string) {
     this.columnKey = key;
   }
-
-  // onChangePhrase(event: Event): void {
-  //   console.log(event);
-  //   this.phrase = (event.target as HTMLInputElement).value;
-  // }
 }
