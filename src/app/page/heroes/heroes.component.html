@@ -3,10 +3,10 @@
     <div class="col-7">
       <h3>All of the Heroes should show below</h3>
     </div>
-    <form class="form-inline my-2 my-lg-0 col-5 d-flex justify-content-end">
-      <input (keyup)="onChangePhrase($event)" class="form-control mr-sm-2"
-        type="text" placeholder="Search">
-    </form>
+    <div class="form-inline my-2 my-lg-0 col-5 d-flex justify-content-end">
+      <input [(ngModel)]="phrase" class="form-control mr-sm-2" type="text"
+        placeholder="Search by name">
+    </div>
   </div>
 
   <table class="table table-striped">
@@ -20,7 +20,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let hero of heroesList$ | async">
+      <tr *ngFor="let hero of heroesList$ | async | filter:phrase:searchKey">
         <td>{{hero.id}}</td>
         <td>{{hero.name}}</td>
         <td>{{hero.superPower}} </td>

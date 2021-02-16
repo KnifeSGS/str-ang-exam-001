@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Hero } from 'src/app/model/hero';
 import { HeroService } from 'src/app/service/hero.service';
@@ -11,8 +11,10 @@ import { HeroService } from 'src/app/service/hero.service';
 export class HeroesComponent implements OnInit {
 
   heroesList$: BehaviorSubject<Hero[]> = this.hService.list$;
-  columnKey: string = '';
   phrase: string = '';
+  searchKey: string = 'name';
+  columnKey: string = '';
+  phraseString: string = '';
 
   constructor(private hService: HeroService) { }
 
@@ -28,8 +30,8 @@ export class HeroesComponent implements OnInit {
     this.columnKey = key;
   }
 
-  onChangePhrase(event: Event): void {
-    console.log(event);
-    this.phrase = (event.target as HTMLInputElement).value;
-  }
+  // onChangePhrase(event: Event): void {
+  //   console.log(event);
+  //   this.phrase = (event.target as HTMLInputElement).value;
+  // }
 }

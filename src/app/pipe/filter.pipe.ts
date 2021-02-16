@@ -1,33 +1,24 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Hero } from '../model/hero';
 
 @Pipe({
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
 
-  // transform(value: any[], phrase: string, key: string = ''): any {
-  //   // return null;
-  //   if (!Array.isArray(value) || !phrase || !key) {
-  //     return value;
-  //   }
-
-  //   phrase = ('' + phrase).toLowerCase();
-  //   return value.filter(item => {
-  //     const strItem: string = ('' + item[key]).toLowerCase();
-  //     return strItem.includes(phrase);
-  //   })
-
-  // }
-
-  transform(value: any[], phrase: string, key: string = ''): any {
+  transform(value: any[] | null, phrase: string, key: string | number): any[] | null {
     if (!Array.isArray(value) || !phrase || !key) {
       return value;
     }
-    if (Number(phrase)) {
-      return value.filter(item => Number(item[key]) == Number(phrase));
-    } else {
-      phrase = phrase.toLowerCase();
-      return value.filter(item => String(item[key]).toLowerCase().includes(phrase));
-    }
+    phrase = typeof phrase !== 'number' ? ('' + phrase).toLowerCase() : phrase;
+
+    return value.filter(item => {
+      if (typeof item[key] === 'number' && typeof phrase === 'number') {
+        return item[key] === phrase;
+      }
+
+      return ('' + item[key]).toLowerCase().includes((phrase as string));
+    });
+
   }
 }
